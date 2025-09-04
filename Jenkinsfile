@@ -30,7 +30,8 @@ pipeline {
             steps {
                 sh '''
                     docker rm -f apache-test || true
-                    docker run -d --name apache-test -p 8080:80 $DOCKER_IMAGE
+                    docker run -d --name apache-test -p 8888:80 $DOCKER_IMAGE
+
                 '''
             }
         }
